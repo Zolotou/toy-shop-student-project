@@ -1,0 +1,17 @@
+$(document).ready(function(){
+   $('.product-carousel').bxSlider({
+    pagerCustom: '.product-slider-nav',
+    controls: true,
+    infiniteLoop: true,
+    hideControlOnEnd: false,
+   /*  mode: 'vertical',
+    minSlides: 1,
+    maxSlides: 2 */
+    /* mode: 'fade',
+    captions: true,
+    slideWidth: 600 */
+   })
+
+  
+
+    });

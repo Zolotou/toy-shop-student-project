@@ -1,0 +1,39 @@
+.slick-initialized .slider__item.slick-slide {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slider__img {
+  width: 400px;
+  margin: 0 10px 0 0;
+  flex: 0 0 auto;
+}
+
+.slider__dots {
+  list-style: none;
+  margin: 30px 100px 100px;
+  text-align: center;
+}
+
+.slider__dots li {
+  display: inline-block;
+  margin: 0 10px;
+  border: 1px solid transparent;
+}
+
+.slider__dots .slick-active {
+  border-color: red;
+}
+
+.slider__dots img {
+  width: 100px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.slick-dots li{
+	width: 100px;
+	height: 100px;
+}
