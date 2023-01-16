@@ -33,6 +33,11 @@ body._lock{
     z-index: 5; /*я проставила*/
 }
 
+.menu__sublist  .menu__sublist {
+    top: 35%;
+    left: 35%;
+}
+
 .menu__sublist li{
     margin: 0px 0px 10px 0px;
 }
@@ -54,21 +59,19 @@ body._lock{
 }
 
 /*----------------------*/
-body._pc .menu__list > li:hover .menu__sublist {
+.menu__list  li:hover > .menu__sublist {
     opacity: 1;
     visibility: visible;
     transform: translate(0px, 0px);
     pointer-events: all;
 }
 
-body._touch .menu__list > li {
+.menu__list  li {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-body._touch .menu__link {
-    flex: 1 1 auto; /* на всю ширину */
-}
 
 body._pc .menu__arrow, body._touch .menu__arrow {
     display: block;
@@ -82,29 +85,14 @@ body._pc .menu__arrow, body._touch .menu__arrow {
 }
 
 /* click по стрелке*/
-body._touch .menu__list > li._active > /*Вадим добавил уголок*/.menu__sublist {
+li._active > /*Вадим добавил уголок*/.menu__sublist {
     opacity: 1;
     visibility: visible;
     transform: translate(0px, 0px);
     pointer-events: all;
 }
 
-body._touch .menu__list > li._active > /*Вадим добавил уголок*/.menu__sublist > li > .menu__sublist {
-    opacity: 0;
-    visibility: hidden;
-    /* transform: translate(0px, 0px); */
-    pointer-events: none;
-}
-
-body._touch .menu__list > li._active > /*Вадим добавил уголок*/.menu__sublist > li._active > .menu__sublist {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0px, 0px);
-    pointer-events: all;
-}
-
-body._touch .menu__list > li._active .menu__arrow,
-body._pc .menu__list > li._active .menu__arrow /*я добавила*/
+li._active > .menu__arrow, li:hover > .menu__arrow 
 {
     transform: rotate(-180deg);
 }
@@ -230,12 +218,12 @@ body._pc .menu__list > li._active .menu__arrow /*я добавила*/
         top: 80px; /* на высоту sticky header-center*/
         left: -100%;
         width: 100%;
-        height: 100%;
+        height: 92%;
         /* transform: translate(-100%, 0px); */
         background-color: rgba(0, 0, 0, 0.9);
         padding: 100px 30px 30px 30px;
         transition: left 0.3s ease 0s;
-        overflow-y: visible;
+        overflow: auto;
         z-index: 50; /* я добавила*/
     }
 
@@ -255,6 +243,10 @@ body._pc .menu__list > li._active .menu__arrow /*я добавила*/
         z-index: 2;
     } */
 
+    li:hover > .menu__arrow  {
+        transform: none;
+    }
+
     .menu__list > li {
         flex-wrap: wrap;
         margin: 0px 0px 30px 0px;
@@ -264,7 +256,7 @@ body._pc .menu__list > li._active .menu__arrow /*я добавила*/
         margin: 0;
     }
 
-    .menu__list > li._active .menu__sublist {
+    .menu__list  li._active > .menu__sublist {
         display: block;
     }
 
@@ -278,6 +270,11 @@ body._pc .menu__list > li._active .menu__arrow /*я добавила*/
         flex: 1 1 100%;
         margin: 20px 0px 0px 0px;
         display: none;
+    }
+
+    .menu__sublist  .menu__sublist {
+        top: 100%;
+        left: 0%;
     }
 
     .menu__sublink {
