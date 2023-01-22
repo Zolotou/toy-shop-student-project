@@ -280,6 +280,7 @@
     font-weight: 600;
     text-transform:  uppercase;
     margin-bottom: 12px;
+    pointer-events: none;
 }
 
 .footer-menu-right p.footer-location::before{
@@ -356,6 +357,18 @@
 
     .f-list-link.open{
         width: 100%;
+    }
+
+    .footer-menu-left .f-list-link.open {
+        padding: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .footer-menu-left .f-list-link {
+        height: auto;
+        overflow: auto;
+        padding: 10px 20px;
     }
 
     .footer-menu-container{
