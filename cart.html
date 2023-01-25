@@ -12,12 +12,14 @@
     <link rel="stylesheet" href="css/filter_price.css" type="text/css">
     <link rel="stylesheet" href="css/gallery.css" type="text/css">
     <link rel="stylesheet" href="css/cart-right.css" type="text/css">
-     <link rel="stylesheet" href="css/slick.css" type="text/css">   
-     <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
-     <link rel="stylesheet" href="css/footer_final.css" type="text/css">
-     <link rel="stylesheet" href="css/adaptive.css" type="text/css">
+    <link rel="stylesheet" href="css/slick.css" type="text/css">   
+    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
 
-     <link rel="stylesheet" href="css/style_burger.css" type="text/css">
+    <link rel="stylesheet" href="css/cart.css" type="text/css">
+    <link rel="stylesheet" href="css/footer_final.css" type="text/css">
+    <link rel="stylesheet" href="css/adaptive.css" type="text/css">
+
+    <link rel="stylesheet" href="css/style_burger.css" type="text/css">
     <!-- <link rel="stylesheet" href="css/carousel.css" type="text/css"> -->
     <!-- <script src="js/jquery-3.6.1.js" type="text/javascript"></script> -->
     <!-- <script src="js/control.js" type="text/javascript"></script> -->
@@ -154,9 +156,10 @@
                 <div class="total-title">Итого</div>
                 <div class="total-price">0.00 р.</div>
             </div>
-            <!-- Buy button-->                
+            <!-- Buy button-->
+            <button type="button" class="btn-buy">Buy Now</button>
+            </br>
             <button type="button" class="btn-clear-cart">Очистить корзину</button>
-            <button type="button" class="btn-buy">Оформить заказ</button>
             
             <!-- Cart Close-->
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve" class="cart-close">
@@ -271,340 +274,87 @@
                         </div>                        
                     </div>
                 </aside>
-                <section class="right-side"> <!-- Правая галерея товаров -->
-                   <!--  <div class="carousel">
-                        <div class="items-container">
-                          <div class="item active">
-                            <div class="description">
-                              <div class="project-name">theyalow 1</div>
-                              <img class="project-image" src="images/NICI/slider/220711_WinterFriends_Buehne_1260x443px_ENG.jpg" alt="project">
+                <section class="right-side"> <!-- Правая панель -->
+                    <div class="cart_container cart-content-section">
+                        <h2 class="section-header">Корзина покупок</h2>
+                    <!--  Таблица товаров в корзине -->
+                        <div class="cart-table-container">
+                            <!-- Заголовок таблицы -->
+                            <div class="main-cart-row" data-set="relative">
+                                <div class="main-cart-itemimage-container main-cart-not-column" data-set="50%">
+                                    <span class="main-cart-image main-cart-header main-cart-column"></span>
+                                    <span class="main-cart-item main-cart-header main-cart-column">Название товара</span>
+                                </div>
+                                <div class="main-cart-priceqtysum-container main-cart-not-column" data-set="50%">                                    
+                                    <span class="main-cart-hide main-cart-header main-cart-column"></span>
+                                    <span class="main-cart-price main-cart-header main-cart-column">Цена</span>
+                                    <span class="main-cart-quantity main-cart-header main-cart-column">Количество</span>
+                                    <span class="main-cart-sum main-cart-header main-cart-column">Сумма</span>
+                                </div>
+                                <!-- <div data-set="40%">
+                                </div> -->
+                                <!-- <span class="main-cart-remove main-cart-header main-cart-column" data-set="absolute"></span> -->
                             </div>
-                          </div>
-                          <div class="item">
-                            <div class="description">
-                              <div class="project-name">theyalow 2</div>
-                              <img class="project-image" src="images/NICI/slider/220713_T-F_Winter_Buehne_1260x443px_ENG.jpg" alt="project">
-                            </div>
-                          </div>
-                          <div class="item">
-                            <div class="description">
-                              <div class="project-name">theyalow 3</div>
-                              <img class="project-image" src="images/NICI/slider/220831_Buehne_JM_Selection_1260x443_ENG.jpg" alt="project">
-                            </div>
-                          </div>
-                        </div>
-                        <div class="control left">
-                          <div class="arrow left">&lt;</div>
-                        </div>
-                        <div class="control right">
-                          <div class="arrow right">&gt;</div>
-                        </div>
-                    </div>
-                    <script src="js/carousel-control.js" type="text/javascript"></script>  -->
-
-
-
-                    <!-- Главный слайдер -->
-                    <div class="slider-carousel">
-                        <div class="slider-wrap">
-                        <a href="#">
-                            <img class="slider-img" src="images/NICI/slider/slider1.jpg" alt="" /> 
-                        </a>
-                        </div> 
-                        <div class="slider-wrap">
-                        <a href="#">                    
-                            <img class="slider-img" src="images/NICI/slider/slider2.jpg" alt="" />   
-                        </a>
-                        </div>
-                        <div class="slider-wrap"> 
-                        <a href="#">                          
-                            <img class="slider-img" src="images/NICI/slider/slider3.jpg" alt="" />
-                        </a> 
-                        </div>   
-                    </div>
-                         <!---
-          
-                         <img src="images/NICI/slider_birds/theyalow1.png" alt="" />                        
-                         <img src="images/NICI/slider_birds/theyalow2.png" alt="" />                        
-                         <img src="images/NICI/slider_birds/theyalow3.png" alt="" />
-                     </div>    -->            
-                   
-
-                    <!--<div class="picture-slider" id="picture-slider">
-                        <div class="slider-wrap forClone">                         
-                            <img class="slider-img" src="images/NICI/slider/slider1.jpg" alt="" />
-                        </div>                                  
-                        <div class="slider-wrap">                         
-                            <img class="slider-img" src="images/NICI/slider/slider2.jpg" alt="" />
-                        </div>  
-                        <div class="slider-wrap">                         
-                            <img class="slider-img" src="images/NICI/slider/slider3.jpg" alt="" />
-                        </div>                            
-                    </div>
-                     <script src="js/slick-control.js" type="text/javascript"></script> -->
-
-
-                   <!--  <ul class="shop_gallery"> -->
-                    <ul id="imgBlock" class="layout_four_column">
-                        <li class="img_block">
-                            <a href="" class="link-img-product">
-                                <div class="img-product">
-                                    <img class="img" src="images/goods/48531_01_HA_Frei.jpg" alt="" />
-                                </div> 
-                                <!-- <p class="name-size-product"> -->
-                                    <h3 class="name-product">Мягкая игрушка Овечка Jolly Frances</h3>
-                                    <h3 class="size-product">25 см</h3>
-                                <!-- </p>     -->
-                            </a>    
-                            <a href="">Jolly Mäh</a>
-                            <div class="price-product">
-                                <p class="initial-price-product">
-                                    67.08 р.
-                                </p>
-                                <p class="final-price-product">
-                                    53.12 р.
-                                </p>
-                            </div>
-                            <button class="img_block__button add-cart" data-id="NICI1111">В корзину</button>
-                            <div class="promotion">
-                                <div class="svg-promotion">
-                                    <svg
-                                        
-                                        viewBox="0 0 20.896444 20.788588"
-                                        version="1.1"
-                                        id="svg933"
-                                        inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-                                        sodipodi:docname="star-promotion2.svg"
-                                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:svg="http://www.w3.org/2000/svg">
-                                        <defs
-                                        id="defs930" />
-                                        <g
-                                            inkscape:label="Layer 1"
-                                            inkscape:groupmode="layer"
-                                            id="layer1"
-                                            transform="translate(-0.05709351,0.0295498)">    
-                                            <path
-                                                style="display:inline;fill:#e20049;fill-opacity:1;stroke:#e20049;stroke-width:0.264583;stroke-opacity:1"
-                                                d="M 12.742515,20.207419 C 12.342655,20.018252 11.931185,19.676738 10.895035,18.674042 9.3249951,17.154691 8.9721047,16.936232 8.0878447,16.936232 7.3210647,16.936232 6.6018947,17.185332 4.9776047,18.013528 3.1334847,18.953804 2.5434147,19.055174 2.0113547,18.523108 1.3247947,17.836548 1.4731147,17.08179 2.6995947,15.020908 3.9046447,12.996041 4.0528647,11.763377 3.2391747,10.533651 3.0877947,10.304874 2.4617047,9.5969233 1.8478647,8.9604286 0.6251547,7.6926021 0.38769473,7.3087551 0.38769473,6.6001241 0.38769473,5.9713071 0.61016473,5.5691461 1.0707147,5.3654221 1.5680347,5.1454341 2.3849647,5.1997051 3.9262947,5.5551251 5.3827847,5.8909821 6.6896547,5.9760301 7.2289947,5.7700521 7.8367647,5.5379431 8.4469247,4.7830421 9.5330551,2.9194181 10.608505,1.0741211 11.144855,0.41757916 11.655105,0.32185516 12.041525,0.24936216 12.395985,0.38994316 12.681095,0.72878213 13.116795,1.2465841 13.269635,1.8902841 13.425739,3.8649721 13.622118,6.3491771 13.731754,6.6732601 14.493793,7.0221321 14.734397,7.1322861 15.684257,7.3961601 16.604594,7.6085221 18.621299,8.0738641 19.431095,8.3325841 19.966414,8.6825771 20.457086,9.0033816 20.715349,9.4343026 20.627941,9.7863523 20.512061,10.253069 19.776316,10.843904 18.605865,11.410166 15.405169,12.958658 15.229234,13.067995 14.867184,13.733625 14.502019,14.404984 14.428923,15.219121 14.588871,16.833402 14.756313,18.523287 14.75958,19.528093 14.598891,19.912681 14.360549,20.483112 13.58542,20.60618 12.742515,20.207419 Z"
-                                                id="path6437" />
+                            <!-- Строка таблицы -->
+                            <div class="main-cart-row">
+                                <div class="main-cart-itemimage-container main-cart-not-column" data-set="50%">
+                                    <div class="main-cart-image main-cart-column">
+                                        <a href="#"><img src="images/goods/48531_01_HA_Frei.jpg" alt="" class="main-cart-img"></a>
+                                    </div>
+                                    <div class="main-cart-item main-cart-column">
+                                        <a href="#" class="main-cart-title">Мягкая игрушка Овечка Jolly Frances</a>
+                                        <div>Артикул: NICI1111</div>
+                                        <div>Размер: 25 см</div>
+                                    </div>
+                                </div>
+                                <div class="main-cart-priceqtysum-container main-cart-not-column" data-set="50%">
+                                    <div class="main-cart-hide main-cart-column"></div>
+                                    <div class="main-cart-price main-cart-column">
+                                        <div class="cart-price"><!-- <p hide gap>header price</p> --><p class="main-cart-header-hide">Цена</p><p>53.12 р.</p></div>
+                                    </div>
+                                    <div class="main-cart-quantity main-cart-column">
+                                        <p class="main-cart-header-hide">Количество</p>
+                                        <div class="cart-quantity-controls">
+                                            <button class="cart-minus-quantity" data-id="${id}">-</button>
+                                            <input type="number" value="1" class="cart-quantity" data-id="${id}">
+                                            <button class="cart-plus-quantity" data-id="${id}">+</button>                                
+                                        </div>
+                                    </div>
+                                    <div class="main-cart-sum main-cart-column">
+                                        <p class="main-cart-header-hide">Сумма</p>
+                                        <span>53.12</span><span> р.</span>
+                                    </div>                                     
+                                </div>                                  
+                                <div class="main-cart-remove">
+                                    <!--Remove cart-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 256 256" xml:space="preserve" class="cart-remove" data-id="${id}">
+                                        <defs>
+                                        </defs>
+                                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                                            <path d="M 64.71 90 H 25.291 c -4.693 0 -8.584 -3.67 -8.859 -8.355 l -3.928 -67.088 c -0.048 -0.825 0.246 -1.633 0.812 -2.234 c 0.567 -0.601 1.356 -0.941 2.183 -0.941 h 59.002 c 0.826 0 1.615 0.341 2.183 0.941 c 0.566 0.601 0.86 1.409 0.813 2.234 l -3.928 67.089 C 73.294 86.33 69.403 90 64.71 90 z M 18.679 17.381 l 3.743 63.913 C 22.51 82.812 23.771 84 25.291 84 H 64.71 c 1.52 0 2.779 -1.188 2.868 -2.705 l 3.742 -63.914 H 18.679 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                            <path d="M 80.696 17.381 H 9.304 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 71.393 c 1.657 0 3 1.343 3 3 S 82.354 17.381 80.696 17.381 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                            <path d="M 58.729 17.381 H 31.271 c -1.657 0 -3 -1.343 -3 -3 V 8.789 C 28.271 3.943 32.214 0 37.061 0 h 15.879 c 4.847 0 8.789 3.943 8.789 8.789 v 5.592 C 61.729 16.038 60.386 17.381 58.729 17.381 z M 34.271 11.381 h 21.457 V 8.789 C 55.729 7.251 54.478 6 52.939 6 H 37.061 c -1.538 0 -2.789 1.251 -2.789 2.789 V 11.381 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                            <path d="M 58.33 74.991 c -0.06 0 -0.118 -0.002 -0.179 -0.005 c -1.653 -0.097 -2.916 -1.517 -2.819 -3.171 l 2.474 -42.244 c 0.097 -1.655 1.508 -2.933 3.171 -2.819 c 1.653 0.097 2.916 1.516 2.819 3.17 l -2.474 42.245 C 61.229 73.761 59.906 74.991 58.33 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                            <path d="M 31.669 74.991 c -1.577 0 -2.898 -1.23 -2.992 -2.824 l -2.473 -42.245 c -0.097 -1.654 1.165 -3.073 2.819 -3.17 c 1.646 -0.111 3.073 1.165 3.17 2.819 l 2.473 42.244 c 0.097 1.654 -1.165 3.074 -2.819 3.171 C 31.788 74.989 31.729 74.991 31.669 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                                            <path d="M 45 74.991 c -1.657 0 -3 -1.343 -3 -3 V 29.747 c 0 -1.657 1.343 -3 3 -3 c 1.657 0 3 1.343 3 3 v 42.244 C 48 73.648 46.657 74.991 45 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
                                         </g>
                                     </svg>
-                                </div> 
-                                <p>Акция</p>   
-                            </div>
-                        </li>
-                        <li class="img_block">
-                            <a href="" class="link-img-product">
-                                <div class="img-product">
-                                    <img class="img" src="images/goods/48533_01_HA_Frei.jpg" alt="" />
-                                </div> 
-                                <!-- <p class="name-size-product"> -->
-                                    <h3 class="name-product">Мягкая игрушка Овечка Jolly Rosa</h3>
-                                    <h3 class="size-product">25 см</h3>
-                                <!-- </p>     -->
-                            </a>    
-                            <a href="">Jolly Mäh</a>
-                            <div class="price-product">
-                                <p class="initial-price-product">
-                                    67.08 р.
-                                </p>
-                                <p class="final-price-product">
-                                    53.12 р.
-                                </p>
-                            </div>
-                            <button class="img_block__button add-cart" data-id="NICI2222">В корзину</button>
-                        </li>
-                        <li class="img_block">
-                            <a href="" class="link-img-product">
-                                <div class="img-product">
-                                    <img class="img" src="images/goods/48534_01_HA_Frei.jpg" alt="" />
-                                </div> 
-                                <!-- <p class="name-size-product"> -->
-                                    <h3 class="name-product">Мягкая игрушка Овечка Jolly Lucy</h3>
-                                    <h3 class="size-product">25 см</h3>
-                                <!-- </p>     -->
-                            </a>    
-                            <a href="">Jolly Mäh</a>
-                            <div class="price-product">
-                                <p class="initial-price-product">
-                                    67.08 р.
-                                </p>
-                                <p class="final-price-product">
-                                    53.12 р.
-                                </p>
-                            </div>
-                            <button class="img_block__button add-cart" data-id="NICI3333">В корзину</button>
-                        </li>
+                                </div>                            
+                            </div>  
+                            <!-- Строка таблицы -->
+                              
+                            <div class="main-cart-total"  >
+                                <strong class="main-cart-total-title">Итого:</strong>
+                                <span class="main-cart-total-price">53.12 р.</span>
+                            </div>                            
+                        </div>
+                        <div class="main-cart-buttons-container">
+                            <button type="button" class="main-cart-clear-cart">Очистить корзину</button>
+                            <button type="button" class="main-cart-back">Продолжить покупки</button>
+                            <button type="button" class="main-cart-button-order">Оформить заказ</button>
+                        </div>
 
-                        <li class="img_block">
-                            <a href="" class="link-img-product">
-                                <div class="img-product">
-                                    <img class="img" src="images/goods/48531_01_HA_Frei.jpg" alt="" />
-                                </div> 
-                                <!-- <p class="name-size-product"> -->
-                                    <h3 class="name-product">Мягкая игрушка Овечка Jolly Frances</h3>
-                                    <h3 class="size-product">25 см</h3>
-                                <!-- </p>     -->
-                            </a>    
-                            <a href="">Jolly Mäh</a>
-                            <div class="price-product">
-                                <p class="initial-price-product">
-                                    67.08 р.
-                                </p>
-                                <p class="final-price-product">
-                                    53.12 р.
-                                </p>
-                            </div>
-                            <button class="img_block__button add-cart">В корзину</button>
-                            <div class="promotion">
-                                <div class="svg-promotion">
-                                    <svg
-                                        
-                                        viewBox="0 0 20.896444 20.788588"
-                                        version="1.1"
-                                        id="svg933"
-                                        inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-                                        sodipodi:docname="star-promotion2.svg"
-                                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:svg="http://www.w3.org/2000/svg">
-                                        <defs
-                                        id="defs930" />
-                                        <g
-                                            inkscape:label="Layer 1"
-                                            inkscape:groupmode="layer"
-                                            id="layer1"
-                                            transform="translate(-0.05709351,0.0295498)">    
-                                            <path
-                                                style="display:inline;fill:#e20049;fill-opacity:1;stroke:#e20049;stroke-width:0.264583;stroke-opacity:1"
-                                                d="M 12.742515,20.207419 C 12.342655,20.018252 11.931185,19.676738 10.895035,18.674042 9.3249951,17.154691 8.9721047,16.936232 8.0878447,16.936232 7.3210647,16.936232 6.6018947,17.185332 4.9776047,18.013528 3.1334847,18.953804 2.5434147,19.055174 2.0113547,18.523108 1.3247947,17.836548 1.4731147,17.08179 2.6995947,15.020908 3.9046447,12.996041 4.0528647,11.763377 3.2391747,10.533651 3.0877947,10.304874 2.4617047,9.5969233 1.8478647,8.9604286 0.6251547,7.6926021 0.38769473,7.3087551 0.38769473,6.6001241 0.38769473,5.9713071 0.61016473,5.5691461 1.0707147,5.3654221 1.5680347,5.1454341 2.3849647,5.1997051 3.9262947,5.5551251 5.3827847,5.8909821 6.6896547,5.9760301 7.2289947,5.7700521 7.8367647,5.5379431 8.4469247,4.7830421 9.5330551,2.9194181 10.608505,1.0741211 11.144855,0.41757916 11.655105,0.32185516 12.041525,0.24936216 12.395985,0.38994316 12.681095,0.72878213 13.116795,1.2465841 13.269635,1.8902841 13.425739,3.8649721 13.622118,6.3491771 13.731754,6.6732601 14.493793,7.0221321 14.734397,7.1322861 15.684257,7.3961601 16.604594,7.6085221 18.621299,8.0738641 19.431095,8.3325841 19.966414,8.6825771 20.457086,9.0033816 20.715349,9.4343026 20.627941,9.7863523 20.512061,10.253069 19.776316,10.843904 18.605865,11.410166 15.405169,12.958658 15.229234,13.067995 14.867184,13.733625 14.502019,14.404984 14.428923,15.219121 14.588871,16.833402 14.756313,18.523287 14.75958,19.528093 14.598891,19.912681 14.360549,20.483112 13.58542,20.60618 12.742515,20.207419 Z"
-                                                id="path6437" />
-                                        </g>
-                                    </svg>
-                                </div> 
-                                <p>Акция</p>   
-                            </div>
-                        </li>
-                        <li class="img_block">
-                            <a href="" class="link-img-product">
-                                <div class="img-product">
-                                    <img class="img" src="images/goods/48533_01_HA_Frei.jpg" alt="" />
-                                </div> 
-                                <!-- <p class="name-size-product"> -->
-                                    <h3 class="name-product">Мягкая игрушка Овечка Jolly Rosa</h3>
-                                    <h3 class="size-product">25 см</h3>
-                                <!-- </p>     -->
-                            </a>    
-                            <a href="">Jolly Mäh</a>
-                            <div class="price-product">
-                                <p class="initial-price-product">
-                                    67.08 р.
-                                </p>
-                                <p class="final-price-product">
-                                    53.12 р.
-                                </p>
-                            </div>
-                            <button class="img_block__button add-cart">В корзину</button>
-                        </li>
-                        <li class="img_block">
-                            <a href="" class="link-img-product">
-                                <div class="img-product">
-                                    <img class="img" src="images/goods/48534_01_HA_Frei.jpg" alt="" />
-                                </div> 
-                                <!-- <p class="name-size-product"> -->
-                                    <h3 class="name-product">Мягкая игрушка Овечка Jolly Lucy</h3>
-                                    <h3 class="size-product">25 см</h3>
-                                <!-- </p>     -->
-                            </a>    
-                            <a href="">Jolly Mäh</a>
-                            <div class="price-product">
-                                <p class="initial-price-product">
-                                    67.08 р.
-                                </p>
-                                <p class="final-price-product">
-                                    53.12 р.
-                                </p>
-                            </div>
-                            <button class="img_block__button add-cart">В корзину</button>
-                        </li>
-
-                        <li class="img_block">
-                            <a href="" class="link-img-product">
-                                <div class="img-product">
-                                    <img class="img" src="images/goods/48531_01_HA_Frei.jpg" alt="" />
-                                </div> 
-                                <!-- <p class="name-size-product"> -->
-                                    <h3 class="name-product">Мягкая игрушка Овечка Jolly Frances</h3>
-                                    <h3 class="size-product">25 см</h3>
-                                <!-- </p>     -->
-                            </a>    
-                            <a href="">Jolly Mäh</a>
-                            <div class="price-product">
-                                <p class="initial-price-product">
-                                    67.08 р.
-                                </p>
-                                <p class="final-price-product">
-                                    53.12 р.
-                                </p>
-                            </div>
-                            <button class="img_block__button add-cart">В корзину</button>
-                            <div class="promotion">
-                                <div class="svg-promotion">
-                                    <svg
-                                        
-                                        viewBox="0 0 20.896444 20.788588"
-                                        version="1.1"
-                                        id="svg933"
-                                        inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-                                        sodipodi:docname="star-promotion2.svg"
-                                        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-                                        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:svg="http://www.w3.org/2000/svg">
-                                        <defs
-                                        id="defs930" />
-                                        <g
-                                            inkscape:label="Layer 1"
-                                            inkscape:groupmode="layer"
-                                            id="layer1"
-                                            transform="translate(-0.05709351,0.0295498)">    
-                                            <path
-                                                style="display:inline;fill:#e20049;fill-opacity:1;stroke:#e20049;stroke-width:0.264583;stroke-opacity:1"
-                                                d="M 12.742515,20.207419 C 12.342655,20.018252 11.931185,19.676738 10.895035,18.674042 9.3249951,17.154691 8.9721047,16.936232 8.0878447,16.936232 7.3210647,16.936232 6.6018947,17.185332 4.9776047,18.013528 3.1334847,18.953804 2.5434147,19.055174 2.0113547,18.523108 1.3247947,17.836548 1.4731147,17.08179 2.6995947,15.020908 3.9046447,12.996041 4.0528647,11.763377 3.2391747,10.533651 3.0877947,10.304874 2.4617047,9.5969233 1.8478647,8.9604286 0.6251547,7.6926021 0.38769473,7.3087551 0.38769473,6.6001241 0.38769473,5.9713071 0.61016473,5.5691461 1.0707147,5.3654221 1.5680347,5.1454341 2.3849647,5.1997051 3.9262947,5.5551251 5.3827847,5.8909821 6.6896547,5.9760301 7.2289947,5.7700521 7.8367647,5.5379431 8.4469247,4.7830421 9.5330551,2.9194181 10.608505,1.0741211 11.144855,0.41757916 11.655105,0.32185516 12.041525,0.24936216 12.395985,0.38994316 12.681095,0.72878213 13.116795,1.2465841 13.269635,1.8902841 13.425739,3.8649721 13.622118,6.3491771 13.731754,6.6732601 14.493793,7.0221321 14.734397,7.1322861 15.684257,7.3961601 16.604594,7.6085221 18.621299,8.0738641 19.431095,8.3325841 19.966414,8.6825771 20.457086,9.0033816 20.715349,9.4343026 20.627941,9.7863523 20.512061,10.253069 19.776316,10.843904 18.605865,11.410166 15.405169,12.958658 15.229234,13.067995 14.867184,13.733625 14.502019,14.404984 14.428923,15.219121 14.588871,16.833402 14.756313,18.523287 14.75958,19.528093 14.598891,19.912681 14.360549,20.483112 13.58542,20.60618 12.742515,20.207419 Z"
-                                                id="path6437" />
-                                        </g>
-                                    </svg>
-                                </div> 
-                                <p>Акция</p>   
-                            </div>
-                        </li>
-                       <!--  <li class="img_block">
-                            <img class="img" src="images/goods/48533_01_HA_Frei.jpg" alt="" />
-                            <h3>Title</h3>
-                            <p class="img_block__description">
-                                description, description, description
-                            </p>
-                            <button class="img_block__button">В корзину</button>
-                        </li>
-                        <li class="img_block">
-                            <img class="img" src="images/goods/48534_01_HA_Frei.jpg" alt="" />
-                            <h3>Title</h3>
-                            <p class="img_block__description">
-                                description, description, description
-                            </p>
-                            <button class="img_block__button">В корзину</button>
-                        </li> -->
-                       <!--  <li class="card"></li>
-                        <li class="card"></li>
-                        <li class="card"></li>
-                        <li class="card"></li>
-                        <li class="card"></li>
-                        <li class="card"></li> -->
-                    </ul>
+                    </div>
                 </section> 
             </div> 
         </div>

@@ -8,7 +8,7 @@
     background-color: #fff;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     z-index: 100;
-    transition: 0.3s;
+    transition: 0.3s;    
 }
 
 .cart-right.active{
@@ -54,13 +54,42 @@
     font-weight: 500;
 }
 
+.cart-quantity-controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
 .cart-quantity{
-    border: 1px slolid #333;
+    border: 2px solid #00b5c3;
     outline-color: rgb(226,0,73);
+    border-radius: 20%;
     width: 3rem;
     text-align: center;
     font-size: 1rem;
+    margin-left: 3px;
+    margin-right: 3px;
 }
+
+.cart-minus-quantity, .cart-plus-quantity {
+    width: 23px;
+    height: 23px;
+    /* background-color: #00b5c3;     */
+    background-size: cover;  
+    background-repeat: no-repeat;
+    cursor: pointer;
+    
+}
+
+/* .cart-minus-quantity {
+    background-image: url(../images/button-minus-quantity.svg);
+}
+
+.cart-plus-quantity {
+    background-image: url(../images/button-plus-quantity.svg);
+} */
+
 /* кнопка Remove */
 .cart-remove{
     cursor: pointer;
@@ -82,28 +111,61 @@
     margin-left: 00.5rem;
 }
 
-.btn-buy{
-    display: flex;
-    margin: 1.5rem auto 0 auto;
-    padding: 12px 20px;
-    border: none;
-    background-color: rgb(226,0,73);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.btn-buy:hover{
-    background-color: grey;
-}
-
 .cart-close{
     position: absolute;
     top: 1rem;
     right: 0.8rem;
     cursor: pointer;
 }
+
+.btn-clear-cart {
+    cursor: pointer;
+    color: #e20049;
+    background-color: #fff;
+    border: 1px solid #e20049;
+    align-self: center;
+    text-align: center;
+    border-radius: 25px;
+    height: 34px;
+    line-height: 32px;
+    width: 250px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    align-content: center;
+    /* margin: 10px auto; */
+    margin-top: 20px;
+    margin-left: 28px;
+    margin-bottom: 10px;
+}
+
+.btn-buy{
+    /*margin: 1.5rem auto 0 auto;
+    padding: 12px 20px; */
+    
+    background-color: rgb(226,0,73);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    align-self: center;
+    text-align: center;
+    border-radius: 25px;
+    height: 34px;
+    line-height: 32px;
+    width: 250px;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    align-content: center;
+    margin-left: 28px;
+    margin-bottom: 10px;
+}
+
+/* .btn-buy:hover{
+    background-color: grey;
+} */
 
 /* Breakpoints / Making responsive*/
 @media (max-width:1080px){

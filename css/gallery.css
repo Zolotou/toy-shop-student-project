@@ -32,6 +32,25 @@
     position: relative;
   }
 
+  .img_block::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 52%;
+    background-color: transparent;
+    z-index: -1;
+  }
+
+  /* .img_block::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: red;
+  } */
+
+  /*Вадим: заменили для линии после 1-2-3 карточек товара*/
   .layout_four_column > .img_block {
     position: relative;
   }
@@ -74,6 +93,7 @@
     background-color: red; /*#e1e1e1; */
   }
 }
+
 
   .img_block a {
     /* display:inline; */
@@ -155,6 +175,12 @@
     letter-spacing: 2px;
     align-content: center;
   }
+  
+/*Товар уже в корзине*/
+  .img_block__button.disabled {
+    background-color: #ffcc00;
+    color: #484848;
+  }
 
   .promotion{
     position: absolute;
@@ -195,6 +221,7 @@
   }
 
   .img_block:hover {
+    transition: 0.3s ease-in-out;
     box-shadow:
       1px 1px #e20049,
       2px 2px #e20049,
@@ -207,3 +234,16 @@
     transform: translateX(-7px);
   }
 
+  .img_block:hover::before {
+    animation: overlay-animation 0.3s ease-in-out;
+    background-color: #d3d3d3;
+  }
+
+  @keyframes overlay-animation {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 50%;
+    }
+}  

@@ -163,7 +163,7 @@ li._active > .menu__arrow, li:hover > .menu__arrow
 
 
     .menu__icon {
-        z-index: 2000;
+        z-index: 100;
         display: block;
         position: relative;
         width: 30px;

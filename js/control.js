@@ -5,12 +5,14 @@ $(function(){
         $(this).next('.list-link').toggleClass('open');
     })
 
+    // $('.f-title-box').click(function(){
     $('.f-title-box').click(function(event){
         var target = $(event.target);
         var screenWidth = $(window).width();
         if(!target.is(".button-plus-minus") &&  screenWidth > 768) {
             return null;
         }
+    // $('.f-title-box').click(function(){
         $(this).toggleClass('open');
         $(this).next('.f-list-link').toggleClass('open');
     })
