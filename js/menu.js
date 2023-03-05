@@ -25,21 +25,12 @@ if(menuArrows.length > 0){
                         if(siblings_li.length > 0){
                                 for(let index = 0; index < siblings_li.length; index++){
                                         const sibling = siblings_li[index];
-                                        var children_of_sibling_li = getChildren(sibling);
                                         // console.log(children_li);
-                                        if(children_of_sibling_li.length > 0){
-                                                for(let index = 0; index < children_of_sibling_li.length; index++){
-                                                        const child_li = children_of_sibling_li[index];
-                                                        child_li.classList.remove('_active');
-                                                }
-                                        } 
-
                                         sibling.classList.remove('_active');
                                 }
-                        }        
-                        
+                        }     
                         parentElem.classList.toggle('_active');
-                        console.log(parentElem);
+                        console.log(parentElem.classList);
                         // убрать класс _active детям закрытого li
                         if (!(parentElem.classList.contains('_active'))) {
                                 var children_li = getChildren(parentElem);

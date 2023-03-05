@@ -33,9 +33,6 @@ a {
 
 body {
     min-height: 100vh;
-    @media (min-width:300px) and (max-width:1200px) {
-        width: 40%;
-    }
 }
 
 header{
