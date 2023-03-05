@@ -14,6 +14,15 @@
     url(../fonts/Bellota/Bellota-Italic.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "Bellota-Bold";
+    src: url(../fonts/Bellota/Bellota-Bold.ttf);
+    font-weight: bold;
+  }
+  
+
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Bellota:wght@700&display=swap');
+
 @font-face {font-family: "Trebuchet MS";
     src: url(../fonts/TrebuchetMS/trebuchetms.ttf) format("truetype"); 
   }
@@ -255,20 +264,6 @@ nav{
     font-family: 'Trebuchet MS', sans-serif;
 }
 
-.horizont-menu-wrap{
-    height: inherit;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-}
-
-nav, nav li, nav li a {
-    list-style: none;
-    text-decoration: none;
-}
-
 /*Здесь были определители горизонтального меню*/
 
 
@@ -279,7 +274,7 @@ nav, nav li, nav li a {
     flex-flow: row;
     justify-content: space-between;
     gap: 30px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     width: 100%;
 }
 
@@ -318,8 +313,65 @@ footer{
     width: 100%;
 }
 
-.slider-carousel {
+.slider-carousel-wrapper{
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
+.slider-carousel {
+    position: relative;
+    width:95%;
+}
 
+.slider-button-left {
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    border-radius: 50%;
+    border: 0;
+    /* background-color: hsla(4, 0%, 0%, 1); */
+    background-image: url("../images/arrow-left-in-circle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    transition: background-color 200ms ease-out;
+}
+
+.slider-button-left:hover {
+    background-image: url("../images/arrow-left-in-circle-hover.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.slider-button-right{
+    width: 50px;
+    height: 50px;
+    appearance: none;
+    border-radius: 50%;
+    border: 0;
+    /* background-color: hsla(4, 0%, 0%, 1); */
+    background-image: url("../images/arrow-right-in-circle.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 40%;
+    right: 0%;
+    transition: background-color 200ms ease-out;
+}
+
+.slider-button-right:hover {
+    background-image: url("../images/arrow-right-in-circle-hover.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}

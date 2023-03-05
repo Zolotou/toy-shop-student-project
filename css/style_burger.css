@@ -1,3 +1,22 @@
+.horizont-menu-wrap{
+    height: inherit;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+    width: 100%;
+
+    max-width: 1200px;
+    margin: 0px auto;
+}
+
+nav, nav li, nav li a {
+    list-style: none;
+    text-decoration: none;
+}
+
 /* При открытом бургер меню не дает скролить страницу под ним */
 body._lock{
     /* overflow: hidden; */
@@ -5,6 +24,20 @@ body._lock{
 
 .menu__icon{
     display: none;
+}
+
+/* .menu__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+    min-width: 100%;
+} */
+
+.menu__wrapper {
+    display: flex;
+    align-items: center;
 }
 
 /*li первого уровня меню*/
@@ -17,6 +50,7 @@ body._lock{
 .menu__link{
     color: #fff;
     font-size: 18px;
+    white-space: nowrap; 
 }
 
 .menu__link:hover{
@@ -25,33 +59,56 @@ body._lock{
 
 .menu__sublist{
     position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: black;
-    padding: 15px;
-    min-width: 200px;
+    /* top: 100%; */
+    /* right: 0; */
+    background-color: #f8f4ee;
+    color: #484848;    
+    /* padding: 5px 15px; */
+    /* min-width: 200px; */
     z-index: 5; /*я проставила*/
+
+    width: 200px;
+    top: 100%;
+    left: 0;
+    padding-inline-start: 0px;
+}
+
+.menu__profile .menu__sublist{
+    background-color: #fff;
 }
 
 .menu__sublist  .menu__sublist {
-    top: 35%;
-    left: 35%;
+    top: 30%;
+    left: 200px;  
+    padding-inline-start: 0px;
 }
 
 .menu__sublist li{
-    margin: 0px 0px 10px 0px;
+    /* margin: 10px 20px 15px 20px; */
+    border-bottom: 1px solid #e1e2e1;
+    position: relative;
+    /* padding: 10px 20px; закомментировано для burger menu на мобильном экране
+    margin-left: 5px; */
 }
 
 .menu__sublist li:last-child{
-    margin: 0px;
+    /* margin: 0px; */
+    /* margin: 10px 20px 10px 20px; */
+    border-bottom: none;
+    
 }
 
 .menu__sublink{
-    color: #fff;
+    color: #484848;
 }
 
 .menu__sublink:hover{
     text-decoration: underline;
+}
+
+p.menu__sublink {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
 }
 
 .menu__arrow {
@@ -59,7 +116,18 @@ body._lock{
 }
 
 /*----------------------*/
-.menu__list  li:hover > .menu__sublist {
+
+/* Вадим: для Мой профиль кнопки в среднем header-e*/
+.profile > .menu__sublist {
+    margin-top: 0;
+    list-style: none;
+    font-family: 'Trebuchet MS', sans-serif
+}
+
+.menu__profile {
+    position: relative;
+}
+.menu__list  li:hover > .menu__sublist, .menu__profile:hover > .menu__sublist {
     opacity: 1;
     visibility: visible;
     transform: translate(0px, 0px);
@@ -69,19 +137,25 @@ body._lock{
 .menu__list  li {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 
 body._pc .menu__arrow, body._touch .menu__arrow {
-    display: block;
+   /*  display: block;
     width: 0;
     height: 0;
     margin: 0px 0px 0px 5px;
-    transition: transform 0.3s ease 0s;
-    border-left: 5px solid transparent; /*треугольник стрелки*/
-    border-right: 5px solid transparent;
-    border-top: 10px solid #fff;
+    transition: transform 0.3s ease 0s; */
+    /*border-left: 5px solid transparent; */ /*треугольник стрелки*/
+    /*border-right: 5px solid transparent;
+    border-top: 10px solid #fff; */
+
+   /*  width: 14px;
+    height: 15px;
+    background-image: url(../images/arrow-down-grey.svg); */ /*button-minus.svg*/
+   /*  background-size: cover;  
+    background-repeat: no-repeat; */
 }
 
 /* click по стрелке*/
@@ -92,12 +166,13 @@ li._active > /*Вадим добавил уголок*/.menu__sublist {
     pointer-events: all;
 }
 
-li._active > .menu__arrow, li:hover > .menu__arrow 
-{
+/* li._active > .menu__arrow, li:hover > .menu__arrow {
     transform: rotate(-180deg);
 }
-
+ */
 /*----------------------*/
+
+
 
 /*Лекция фрилансера*/
 /* На широком экране компьютера */
@@ -117,24 +192,87 @@ li._active > .menu__arrow, li:hover > .menu__arrow
     font-weight: bold;
 } */
 
+/* nav */
+.main_nav {
+    width: 75%;
+    margin-right: 40px;
+    margin-left: 0px;
+}
+
+
 /*nav ul*/
 .menu__list{
     display: flex;
     align-items: center;
     min-height: 500px; /*Вадим*/
+
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    /* width: 100%; */
+    gap: 30px;
+    /* min-width: 900px;  */
+    padding-inline-start: 0px;
 }
 
 /*li первого уровня меню*/
-.menu__list > li{
-    padding: 10px 0;
+.menu__list > li {
+    /* padding: 10px 0; */
 }
 
-.menu__sublist{
+.menu__sublist {
     transform: translate(0px, 10%);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: all 0.3s ease 0s;
+
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/*я перенесла из общих стилей, которые в начале файла*/
+.menu__sublist li {
+    padding: 10px 20px;
+    /* margin-left: 5px; */
+}
+
+/* .menu__sublist .menu__sublist {
+    margin-left: 5px;
+} */
+
+li.profile-hidden {
+    display: none; !important
+}
+
+.menu__list li .menu__arrow {
+    width: 12px;
+    height: 13px;
+    background-image: url(../images/arrow-down.svg); /*button-minus.svg*/
+    background-size: cover;  
+    background-repeat: no-repeat;
+    margin-left: 10px;
+}
+
+.menu__list li._active > .menu__arrow, .menu__list li:hover > .menu__arrow {
+    transform: rotate(-180deg);
+}
+
+.menu__sublist li .menu__arrow {
+    width: 12px;
+    height: 13px;
+    background-image: url(../images/arrow-down-grey.svg); /*button-minus.svg*/
+    background-size: cover;  
+    background-repeat: no-repeat;
+}
+
+.menu__sublist li._active .menu__wrapper > .menu__arrow, .menu__sublist li:hover .menu__wrapper > .menu__arrow {
+    transform: rotate(-90deg);
+}
+
+.menu__sublist li .menu__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 }
@@ -157,8 +295,17 @@ li._active > .menu__arrow, li:hover > .menu__arrow
         height: 100%;
     }
 
+    /*убрать кнопку Мой профиль в среднем header-e*/
+    .profile {
+        display: none;
+    }
+
     .profile p, .basket p{
         display: none;
+    }
+
+    li.profile-hidden {
+        display: block;
     }
 
 
@@ -215,15 +362,15 @@ li._active > .menu__arrow, li:hover > .menu__arrow
     /* nav */
     .menu__body {
         position: fixed;
-        top: 80px; /* на высоту sticky header-center*/
+        top: 127px; /* на высоту sticky header-center и search розовой панели*/
         left: -100%;
         width: 100%;
-        height: 92%;
+        height: 80%;
         /* transform: translate(-100%, 0px); */
-        background-color: rgba(0, 0, 0, 0.9);
-        padding: 100px 30px 30px 30px;
+        background-color: rgba(248, 244, 238, 1); /* rgba(0, 0, 0, 0.9); */
+        /* padding: 0px 30px 30px 30px; */
         transition: left 0.3s ease 0s;
-        overflow: auto;
+        overflow: scroll;
         z-index: 50; /* я добавила*/
     }
 
@@ -243,44 +390,137 @@ li._active > .menu__arrow, li:hover > .menu__arrow
         z-index: 2;
     } */
 
-    li:hover > .menu__arrow  {
+   /* Вадим убрал li:hover > .menu__arrow  {
         transform: none;
+    } */
+
+    .main_nav li {
+        min-height: 24px;
+        line-height: 24px;
+    }
+
+    /*Я добавила чтобы убрать отступ слева у ul*/
+    .menu__list {
+    padding-inline-start: 0px;
     }
 
     .menu__list > li {
         flex-wrap: wrap;
-        margin: 0px 0px 30px 0px;
+        margin: 20px 0px 20px 0px;
+        border-bottom: 1px solid #e1e2e1;
+        /* display: flex;
+        flex-direction: row;
+        align-items: center;
+        line-height: 40px; */
     }
 
     .menu__list > li:last-child {
         margin: 0;
+        border-bottom: none;
+    }
+
+    /*Я добавила*/
+    .menu__list > li._active {
+        border-bottom: 1px solid  #e1e2e1;
+    }
+
+    /*Я добавила для отступов параграфа p*/
+    .menu__list > li > p{
+        margin-block-start: 0px;
+        margin-block-end: 0px;
     }
 
     .menu__list  li._active > .menu__sublist {
         display: block;
+        width: 100%; /*Вадим добавил*/
     }
 
     .menu__link {
-        font-size: 24px;
+        font-size: 18px;
+        color: #484848;
+        margin-left: 25px;
     }
 
     .menu__sublist {
         position: relative;
-        background-color: #c3c3c3;
+        background-color: rgba(248, 244, 238, 1); /* #c3c3c3; */
         flex: 1 1 100%;
         margin: 20px 0px 0px 0px;
         display: none;
+        border-top: 1px solid #e1e2e1;
+    }
+
+    .menu__list .profile-hidden {
+        background-color: #fff;
+    }
+
+    .menu__list .profile-hidden .menu__sublist {
+        background-color: #fff;
+    }
+
+    /*я добавила*/
+   /*  .menu__wrapper._active {
+        border-bottom: 1px solid #e1e2e1;
+    } */
+
+    .menu__sublist  li {
+        padding: 10px 0px; /* 20px; */
+        /* margin-left: 5px; */
+    }
+
+    /*я добавила*/
+    .menu__sublist  li._active /* > .menu__sublist */ {
+        display: block;
+    }
+
+    /*я добавила*/
+    .menu__sublist  li._active:first-child /* > .menu__sublist */ {
+        border-top: 1px solid #e1e2e1;
     }
 
     .menu__sublist  .menu__sublist {
         top: 100%;
         left: 0%;
+       
     }
 
     .menu__sublink {
-        font-size: 20px;
-        color: black;
+        font-size: 16px;
+        color: #484848;
+        
     }
+
+    .menu__sublist .menu__sublink {
+        margin-left: 50px;
+    }
+
+    .menu__sublist .menu__sublist .menu__sublink {
+        margin-left: 75px;
+    }
+
+    .menu__arrow {
+        cursor: pointer;
+
+        width: 12px;
+        height: 13px;
+        background-image: url(../images/arrow-down-grey.svg); /*button-minus.svg*/
+        background-size: cover;  
+        background-repeat: no-repeat;
+        margin-left: 10px;
+    }
+
+   
+    
+    li._active > .menu__arrow, li._active > .menu__wrapper > .menu__arrow/* , .menu__list li:hover > .menu__arrow */ {
+        transform: rotate(-180deg);
+    }    
+    
+    /* .menu__sublist li .menu__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    } */
+    
 
     /* .horizont-menu-wrap nav ul{
     all:unset;

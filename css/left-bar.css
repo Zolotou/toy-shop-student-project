@@ -121,3 +121,63 @@
     font-weight: 700;
     color: #333;
 }
+
+/* Кнопки фильтра*/
+.filter-buttons-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.filter-buttons-container .apply-filter {
+    cursor: pointer;
+    color: white;
+    background-color: #00b5c3; /* #50bcca; */
+    border: none;
+    align-self: center;
+    text-align: center;
+    border-radius: 25px;
+    height: 34px;
+    line-height: 32px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    align-content: center;
+
+    /* margin: 10px auto;     */
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.filter-buttons-container .apply-filter:hover {
+    background-color: #17A2B8; /* #00b5c3; */
+}
+
+.filter-buttons-container .reset-filter {
+    cursor: pointer;
+    color: #00b5c3; /* #50bcca; */
+    background-color: transparent;
+    border: 1px solid #00b5c3; /* #50bcca; */
+    align-self: center;
+    text-align: center;
+    border-radius: 25px;
+    height: 34px;
+    line-height: 32px;
+    width: 200px;
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 2px;
+    align-content: center;
+
+    margin: 0 20px auto;
+}
+
+.filter-buttons-container .reset-filter:hover {
+    color: #17A2B8; /* #00b5c3; */
+    border: 1px solid #17A2B8; /* #00b5c3; */
+}

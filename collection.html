@@ -10,13 +10,16 @@
     <link rel="stylesheet" href="css/search_style.css" type="text/css">
     <link rel="stylesheet" href="css/left-bar.css" type="text/css">
     <link rel="stylesheet" href="css/filter_price.css" type="text/css">
+    <link rel="stylesheet" href="css/collection.css" type="text/css">
+    <link rel="stylesheet" href="css/sorting.css" type="text/css">
     <link rel="stylesheet" href="css/gallery.css" type="text/css">
     <link rel="stylesheet" href="css/cart-right.css" type="text/css">
-    <link rel="stylesheet" href="css/slick.css" type="text/css">   
-    <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
-    <link rel="stylesheet" href="css/footer_final.css" type="text/css">
-    <link rel="stylesheet" href="css/style_burger.css" type="text/css">
-    <link rel="stylesheet" href="css/adaptive.css" type="text/css">
+     <link rel="stylesheet" href="css/slick.css" type="text/css">   
+     <link rel="stylesheet" href="css/slick-theme.css" type="text/css">
+     <link rel="stylesheet" href="css/footer_final.css" type="text/css">
+     <link rel="stylesheet" href="css/adaptive.css" type="text/css">
+
+     <link rel="stylesheet" href="css/style_burger.css" type="text/css">
     <!-- <link rel="stylesheet" href="css/carousel.css" type="text/css"> -->
     <!-- <script src="js/jquery-3.6.1.js" type="text/javascript"></script> -->
     <!-- <script src="js/control.js" type="text/javascript"></script> -->
@@ -40,21 +43,14 @@
                     <img src="images/NICI/gEaLngtlZ_U_corrected_withText.jpg" alt="NICI animals">
                 </div>
                 <div class="profile-basket">
-                    <div class="profile menu__profile">
+                    <div class="profile">
                         <!-- <div><p></p></div> -->
                         <a href=# class="prof-bask-a">
                             <div>
                                 <img src="images/user-4253.svg" alt="profile icon">
                             </div>
-                            <p>Мой профиль</p>                            
+                            <p>Мой профиль</p>
                         </a>
-                        <ul class="menu__sublist">
-                            <li><a href="#" class="menu__sublink">Логин</a></li>
-                            <li><a href="#" class="menu__sublink">Регистрация</a></li>
-                            <li><a href="#" class="menu__sublink">Личные данные</a></li>
-                            <li><a href="#" class="menu__sublink">История заказов</a></li>
-                            <li><a href="#" class="menu__sublink">Выход</a></li>
-                        </ul>
                     </div>
 
                     <div class="basket">
@@ -63,8 +59,9 @@
                             <div class="non-empty-cart">
                                 <img src="images/shopping-bag-3750.svg" alt="basket icon" id="cart-icon">
                                 <div class="cart-items-counter">0</div>
-                            </div>                            
-                            <p>Корзина</p>                            
+                            </div>
+                            
+                            <p>Корзина</p>
                         </a>
                     </div>
 
@@ -88,10 +85,8 @@
                             <span class="menu__arrow"></span>
                             <ul class="menu__sublist">
                                 <li>
-                                    <div class="menu__wrapper">
-                                        <p class="menu__sublink">Категории</p>
-                                        <span class="menu__arrow"></span>
-                                    </div>
+                                    <p class="menu__sublink">Категории</p>
+                                    <span class="menu__arrow"></span>
                                     <!-- 3 уровень меню -->
                                     <ul class="menu__sublist">
                                         <li><a href="#" class="menu__sublink">Мягкие игрушки</a></li>
@@ -100,38 +95,12 @@
                                         <li><a href="#" class="menu__sublink">Подушки</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <div class="menu__wrapper">
-                                        <p class="menu__sublink">Коллекции</p>
-                                        <span class="menu__arrow"></span>
-                                    </div>    
-                                    <!-- 3 уровень меню -->
-                                    <ul class="menu__sublist">
-                                        <li><a href="#" class="menu__sublink">Овечки Jolly Mäh</a></li>
-                                        <li><a href="#" class="menu__sublink">Единорог Theodor и его друзья</a></li>
-                                        <li><a href="#" class="menu__sublink">Лесные жители</a></li>
-                                        <li><a href="#" class="menu__sublink">Дикие обитатели</a></li>
-                                        <li><a href="#" class="menu__sublink">Веселая ферма</a></li>                                        
-                                    </ul>
-                                </li>                               
+                                <li><p class="menu__sublink">Коллекции</p></li>                               
                             </ul>
                         </li>
                         <li><a href="#" class="menu__link">Акции</a></li>
                         <li><a href="#" class="menu__link">Доставка и оплата</a></li>
                         <li><a href="#" class="menu__link">Контакты</a></li>
-                        <li class="profile-hidden">
-                            <div class="menu__wrapper">
-                                <a href="#" class="menu__link">Мой профиль</a>
-                                <span class="menu__arrow"></span>
-                            </div>    
-                            <ul class="menu__sublist">
-                                <li><a href="#" class="menu__sublink">Логин</a></li>
-                                <li><a href="#" class="menu__sublink">Регистрация</a></li>
-                                <li><a href="#" class="menu__sublink">Личные данные</a></li>
-                                <li><a href="#" class="menu__sublink">История заказов</a></li>
-                                <li><a href="#" class="menu__sublink">Выход</a></li>
-                            </ul>
-                        </li>
                     </ul>
                 </nav> 
                 <!-- Header: Горизонтальное меню: Поиск -->
@@ -156,55 +125,50 @@
                 </div> -->
             </div>    
         </div>
-        <div class="cart-right-overlay">
-            <div class="cart-right">
-                <h2 class="cart-right-title">Ваша корзина</h2>
-                <div class="cart-right-content">
-                    <!-- <div class="cart-right-box"> -->
-                        <!-- <img src="images/goods/48531_01_HA_Frei.jpg" alt="" class="cart-img">
-                        <div class="detail-box">
-                            <div class="cart-product-title">Мягкая игрушка Овечка Jolly Frances</div>
-                            <div class="cart-price">53.12 р.</div>
-                            <input type="number" value="1" class="cart-quantity">
-                        </div> -->
-                        <!--Remove cart-->
-                        <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 256 256" xml:space="preserve" class="cart-remove">
+        <div class="cart-right">
+            <h2 class="cart-right-title">Ваша корзина</h2>
+            <div class="cart-right-content">
+                <!-- <div class="cart-right-box"> -->
+                    <!-- <img src="images/goods/48531_01_HA_Frei.jpg" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">Мягкая игрушка Овечка Jolly Frances</div>
+                        <div class="cart-price">53.12 р.</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div> -->
+                    <!--Remove cart-->
+                    <!--<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="30" height="30" viewBox="0 0 256 256" xml:space="preserve" class="cart-remove">
 
-                            <defs>
-                            </defs>
-                            <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                                <path d="M 64.71 90 H 25.291 c -4.693 0 -8.584 -3.67 -8.859 -8.355 l -3.928 -67.088 c -0.048 -0.825 0.246 -1.633 0.812 -2.234 c 0.567 -0.601 1.356 -0.941 2.183 -0.941 h 59.002 c 0.826 0 1.615 0.341 2.183 0.941 c 0.566 0.601 0.86 1.409 0.813 2.234 l -3.928 67.089 C 73.294 86.33 69.403 90 64.71 90 z M 18.679 17.381 l 3.743 63.913 C 22.51 82.812 23.771 84 25.291 84 H 64.71 c 1.52 0 2.779 -1.188 2.868 -2.705 l 3.742 -63.914 H 18.679 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                <path d="M 80.696 17.381 H 9.304 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 71.393 c 1.657 0 3 1.343 3 3 S 82.354 17.381 80.696 17.381 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                <path d="M 58.729 17.381 H 31.271 c -1.657 0 -3 -1.343 -3 -3 V 8.789 C 28.271 3.943 32.214 0 37.061 0 h 15.879 c 4.847 0 8.789 3.943 8.789 8.789 v 5.592 C 61.729 16.038 60.386 17.381 58.729 17.381 z M 34.271 11.381 h 21.457 V 8.789 C 55.729 7.251 54.478 6 52.939 6 H 37.061 c -1.538 0 -2.789 1.251 -2.789 2.789 V 11.381 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                <path d="M 58.33 74.991 c -0.06 0 -0.118 -0.002 -0.179 -0.005 c -1.653 -0.097 -2.916 -1.517 -2.819 -3.171 l 2.474 -42.244 c 0.097 -1.655 1.508 -2.933 3.171 -2.819 c 1.653 0.097 2.916 1.516 2.819 3.17 l -2.474 42.245 C 61.229 73.761 59.906 74.991 58.33 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                <path d="M 31.669 74.991 c -1.577 0 -2.898 -1.23 -2.992 -2.824 l -2.473 -42.245 c -0.097 -1.654 1.165 -3.073 2.819 -3.17 c 1.646 -0.111 3.073 1.165 3.17 2.819 l 2.473 42.244 c 0.097 1.654 -1.165 3.074 -2.819 3.171 C 31.788 74.989 31.729 74.991 31.669 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                                <path d="M 45 74.991 c -1.657 0 -3 -1.343 -3 -3 V 29.747 c 0 -1.657 1.343 -3 3 -3 c 1.657 0 3 1.343 3 3 v 42.244 C 48 73.648 46.657 74.991 45 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                            </g>
-                        </svg> -->
-                    <!-- </div> -->
-                </div>
-                <!--Total-->
-                <div class="total">
-                    <div class="total-title">Итого:</div>
-                    <div class="total-price">
-                        <span class="total-amount">0.00</span>
-                        <span class="total-currency"> р.</span>
-                    </div>
-                </div>
-                <!-- Buy button-->                
-                <button type="button" class="btn-clear-cart">Очистить корзину</button>
-                <button type="button" class="btn-buy">Оформить заказ</button>
-                
-                <!-- Cart Close-->
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve" class="cart-close">
-                    <defs>
-                    </defs>
-                    <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
-                        <path d="M 7 90 c -1.792 0 -3.583 -0.684 -4.95 -2.05 c -2.734 -2.734 -2.734 -7.166 0 -9.9 l 76 -76 c 2.734 -2.733 7.166 -2.733 9.9 0 c 2.733 2.733 2.733 7.166 0 9.899 l -76 76 C 10.583 89.316 8.792 90 7 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                        <path d="M 83 90 c -1.791 0 -3.583 -0.684 -4.95 -2.05 l -76 -76 c -2.734 -2.733 -2.734 -7.166 0 -9.899 c 2.733 -2.733 7.166 -2.733 9.899 0 l 76 76 c 2.733 2.734 2.733 7.166 0 9.9 C 86.583 89.316 84.791 90 83 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
-                    </g>
-                </svg>
+                        <defs>
+                        </defs>
+                        <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                            <path d="M 64.71 90 H 25.291 c -4.693 0 -8.584 -3.67 -8.859 -8.355 l -3.928 -67.088 c -0.048 -0.825 0.246 -1.633 0.812 -2.234 c 0.567 -0.601 1.356 -0.941 2.183 -0.941 h 59.002 c 0.826 0 1.615 0.341 2.183 0.941 c 0.566 0.601 0.86 1.409 0.813 2.234 l -3.928 67.089 C 73.294 86.33 69.403 90 64.71 90 z M 18.679 17.381 l 3.743 63.913 C 22.51 82.812 23.771 84 25.291 84 H 64.71 c 1.52 0 2.779 -1.188 2.868 -2.705 l 3.742 -63.914 H 18.679 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            <path d="M 80.696 17.381 H 9.304 c -1.657 0 -3 -1.343 -3 -3 s 1.343 -3 3 -3 h 71.393 c 1.657 0 3 1.343 3 3 S 82.354 17.381 80.696 17.381 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            <path d="M 58.729 17.381 H 31.271 c -1.657 0 -3 -1.343 -3 -3 V 8.789 C 28.271 3.943 32.214 0 37.061 0 h 15.879 c 4.847 0 8.789 3.943 8.789 8.789 v 5.592 C 61.729 16.038 60.386 17.381 58.729 17.381 z M 34.271 11.381 h 21.457 V 8.789 C 55.729 7.251 54.478 6 52.939 6 H 37.061 c -1.538 0 -2.789 1.251 -2.789 2.789 V 11.381 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            <path d="M 58.33 74.991 c -0.06 0 -0.118 -0.002 -0.179 -0.005 c -1.653 -0.097 -2.916 -1.517 -2.819 -3.171 l 2.474 -42.244 c 0.097 -1.655 1.508 -2.933 3.171 -2.819 c 1.653 0.097 2.916 1.516 2.819 3.17 l -2.474 42.245 C 61.229 73.761 59.906 74.991 58.33 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            <path d="M 31.669 74.991 c -1.577 0 -2.898 -1.23 -2.992 -2.824 l -2.473 -42.245 c -0.097 -1.654 1.165 -3.073 2.819 -3.17 c 1.646 -0.111 3.073 1.165 3.17 2.819 l 2.473 42.244 c 0.097 1.654 -1.165 3.074 -2.819 3.171 C 31.788 74.989 31.729 74.991 31.669 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                            <path d="M 45 74.991 c -1.657 0 -3 -1.343 -3 -3 V 29.747 c 0 -1.657 1.343 -3 3 -3 c 1.657 0 3 1.343 3 3 v 42.244 C 48 73.648 46.657 74.991 45 74.991 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                        </g>
+                    </svg> -->
+                <!-- </div> -->
             </div>
+            <!--Total-->
+            <div class="total">
+                <div class="total-title">Итого</div>
+                <div class="total-price">0.00 р.</div>
+            </div>
+            <!-- Buy button-->                
+            <button type="button" class="btn-clear-cart">Очистить корзину</button>
+            <button type="button" class="btn-buy">Оформить заказ</button>
+            
+            <!-- Cart Close-->
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="20" height="20" viewBox="0 0 256 256" xml:space="preserve" class="cart-close">
+                <defs>
+                </defs>
+                <g style="stroke: none; stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: none; fill-rule: nonzero; opacity: 1;" transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
+                    <path d="M 7 90 c -1.792 0 -3.583 -0.684 -4.95 -2.05 c -2.734 -2.734 -2.734 -7.166 0 -9.9 l 76 -76 c 2.734 -2.733 7.166 -2.733 9.9 0 c 2.733 2.733 2.733 7.166 0 9.899 l -76 76 C 10.583 89.316 8.792 90 7 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                    <path d="M 83 90 c -1.791 0 -3.583 -0.684 -4.95 -2.05 l -76 -76 c -2.734 -2.733 -2.734 -7.166 0 -9.899 c 2.733 -2.733 7.166 -2.733 9.899 0 l 76 76 c 2.733 2.734 2.733 7.166 0 9.9 C 86.583 89.316 84.791 90 83 90 z" style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 10; fill: rgb(226,0,73); fill-rule: nonzero; opacity: 1;" transform=" matrix(1 0 0 1 0 0) " stroke-linecap="round" />
+                </g>
+            </svg>
         </div>
     </header>
     <main>
@@ -279,9 +243,8 @@
                                     <li>
                                         <input class="" type="checkbox" id="id_farm" name="farm">
                                         <label class="" for="id_farm">Веселая ферма</label>
-                                    </li>                                      
-                                <!-- </form> -->
-                                <!-- левая панель: Фильтр по цене -->
+                                    </li>  
+                                    <!-- левая панель: Фильтр по цене (перенесено снизу сюда)-->
                                     <div class="filter-price">
                                         <div class="left-filter-title">
                                             <p>Цена</p>                                                                   
@@ -305,40 +268,190 @@
                                             <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
                                         </div>
                                     </div>
-                                    <div  class="filter-buttons-container">
-                                        <button type="submit" class="apply-filter">Применить</button>
-                                        <button type="button" class="reset-filter">Сбросить</button>
-                                    </div>
+                                    
                                 </form>
+                                <!-- левая панель: Фильтр по цене -->
+                                <!-- <div class="filter-price">
+                                    <div class="left-filter-title">
+                                        <p>Цена</p>                                                                   
+                                    </div>
+                                    <div class="price-input">
+                                        <div class="field">
+                                            <span>Мин.</span>
+                                            <input type="number" class="input-min" value="2500">
+                                        </div>
+                                        <div class="separator">-</div>
+                                        <div class="field">
+                                            <span>Макс.</span>
+                                            <input type="number" class="input-max" value="7500">
+                                        </div>
+                                    </div>
+                                    <div class="slider">
+                                        <div class="progress"></div>
+                                    </div>
+                                    <div class="range-input">
+                                        <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
+                                        <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
+                                    </div>
+                                </div> -->
                             </div>                            
                         </div>                        
                     </div>
                 </aside>
                 <section class="right-side"> <!-- Правая галерея товаров -->
-                    <!-- Главный слайдер -->
-                   <div class="slider-carousel-wrapper">
-                        <div class="slider-carousel">
-                            <div class="slider-wrap">
-                            <a href="#">
-                                <img class="slider-img" src="images/NICI/slider/slider1.jpg" alt="" /> 
-                            </a>
-                            </div> 
-                            <div class="slider-wrap">
-                            <a href="#">                    
-                                <img class="slider-img" src="images/NICI/slider/slider2.jpg" alt="" />   
-                            </a>
+                    <div class="right-side-wrapper">
+                        <h1 class="right-side-title">Овечки Jolly Mäh</h1>
+                        <div class="right-side-description">
+                            <p><strong>NICI Jolly Mäh - овечки, которые должны вам понравиться!</strong></p>
+                            <p>Самый безошибочно узнаваемый персонаж -- овечки Jolly Mäh на рынке в 2003 года. Красочный мир овечек доставляет удовольствие и занимает прочное место в сердцах детей и взрослых благодаря своему дерзкому и забавному дизайну.</p>
+                            <div class="right-side-description-img-wrapper">
+                                <img src="images/NICI/Sheep_Jolly_Maeh_collection.jpg" alt="category image">
                             </div>
-                            <div class="slider-wrap"> 
-                            <a href="#">                          
-                                <img class="slider-img" src="images/NICI/slider/slider3.jpg" alt="" />
-                            </a> 
-                            </div>                              
+
+                        </div>
+
+                        <div class="dotted-line-divider"></div>
+                        <div class="top-sale-title">Хиты продаж</div>
+                   <!--  <div class="carousel">
+                        <div class="items-container">
+                          <div class="item active">
+                            <div class="description">
+                              <div class="project-name">theyalow 1</div>
+                              <img class="project-image" src="images/NICI/slider/220711_WinterFriends_Buehne_1260x443px_ENG.jpg" alt="project">
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="description">
+                              <div class="project-name">theyalow 2</div>
+                              <img class="project-image" src="images/NICI/slider/220713_T-F_Winter_Buehne_1260x443px_ENG.jpg" alt="project">
+                            </div>
+                          </div>
+                          <div class="item">
+                            <div class="description">
+                              <div class="project-name">theyalow 3</div>
+                              <img class="project-image" src="images/NICI/slider/220831_Buehne_JM_Selection_1260x443_ENG.jpg" alt="project">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="control left">
+                          <div class="arrow left">&lt;</div>
+                        </div>
+                        <div class="control right">
+                          <div class="arrow right">&gt;</div>
+                        </div>
+                    </div>
+                    <script src="js/carousel-control.js" type="text/javascript"></script>  -->
+
+
+
+                    <!-- Слайдер популярных товаров -->
+                    <div class="slider-carousel-wrapper-collection">
+                        <div class="slider-carousel-collection">
+                            <div class="slider-wrap-collection">
+                                <a href="#" class="slider-img-collection">
+                                    <div class="img-product-collection">
+                                        <img class="img" src="images/goods/48531_01_HA_Frei.jpg" alt="" />
+                                    </div>
+                                    <h3 class="name-product-collection">Мягкая игрушка Овечка Jolly Frances</h3>  
+                                    <div class="price-product-collection">
+                                        <p class="initial-price-product-collection">
+                                            67.08 р.
+                                        </p>
+                                        <p class="final-price-product-collection">
+                                            53.12 р.
+                                        </p>
+                                    </div>                                    
+                                </a>
+                            </div> 
+                            <div class="slider-wrap-collection">
+                                <a href="#" class="slider-img-collection">
+                                    <div class="img-product-collection">
+                                        <img class="img" src="images/goods/48531_01_HA_Frei.jpg" alt="" />
+                                    </div>
+                                    <h3 class="name-product-collection">Мягкая игрушка Овечка Jolly Frances</h3>  
+                                    <div class="price-product-collection">
+                                        <p class="initial-price-product-collection">
+                                            67.08 р.
+                                        </p>
+                                        <p class="final-price-product-collection">
+                                            53.12 р.
+                                        </p>
+                                    </div>                                    
+                                </a>
+                            </div>
+                            <div class="slider-wrap-collection"> 
+                                <a href="#" class="slider-img-collection">
+                                    <div class="img-product-collection">
+                                        <img class="img" src="images/goods/48531_01_HA_Frei.jpg" alt="" />
+                                    </div>
+                                    <h3 class="name-product-collection">Мягкая игрушка Овечка Jolly Frances</h3>  
+                                    <div class="price-product-collection">
+                                        <p class="initial-price-product-collection">
+                                            67.08 р.
+                                        </p>
+                                        <p class="final-price-product-collection">
+                                            53.12 р.
+                                        </p>
+                                    </div>                                    
+                                </a>
+                            </div>      
+                            <div class="slider-wrap-collection"> 
+                                <a href="#" class="slider-img-collection">
+                                    <div class="img-product-collection">
+                                        <img class="img" src="images/goods/48531_01_HA_Frei.jpg" alt="" />
+                                    </div>
+                                    <h3 class="name-product-collection">Мягкая игрушка Овечка Jolly Frances</h3>  
+                                    <div class="price-product-collection">
+                                        <p class="initial-price-product-collection">
+                                            67.08 р.
+                                        </p>
+                                        <p class="final-price-product-collection">
+                                            53.12 р.
+                                        </p>
+                                    </div>                                    
+                                </a>
+                            </div>                             
                         </div>
                         <button class="slider-button-left"></button>
                         <button class="slider-button-right"></button>
                     </div>    
+                    
+                         <!---
+          
+                         <img src="images/NICI/slider_birds/theyalow1.png" alt="" />                        
+                         <img src="images/NICI/slider_birds/theyalow2.png" alt="" />                        
+                         <img src="images/NICI/slider_birds/theyalow3.png" alt="" />
+                     </div>    -->            
+                   
 
-                    <div class="sorting-line-divider"></div>
+                    <!--<div class="picture-slider" id="picture-slider">
+                        <div class="slider-wrap forClone">                         
+                            <img class="slider-img" src="images/NICI/slider/slider1.jpg" alt="" />
+                        </div>                                  
+                        <div class="slider-wrap">                         
+                            <img class="slider-img" src="images/NICI/slider/slider2.jpg" alt="" />
+                        </div>  
+                        <div class="slider-wrap">                         
+                            <img class="slider-img" src="images/NICI/slider/slider3.jpg" alt="" />
+                        </div>                            
+                    </div>
+                     <script src="js/slick-control.js" type="text/javascript"></script> -->
+
+                    <div class="sorting-line-divider">
+                        <div class="sort-wrapper">
+                            <form action="/sort" method="get" class="sort-form">
+                                <label for="sort">Сортировать по:</label>
+                                <select name="sort" id="sort" class="sort-field">
+                                    <option value="name">Названию</option>
+                                    <option value="price-low">Уменьшению цены</option>
+                                    <option value="price-high">Увеличению цены</option>                                
+                                </select>
+                                <!-- <button type="submit" name="" value="" class="sort-submit">
+                                    <img class="search-image" src="images/search-icon.svg" alt="Go">
+                                </button>  -->                           
+                            </form>
+                        </div>
+                    </div>
 
                    <!--  <ul class="shop_gallery"> -->
                     <ul id="imgBlock" class="layout_four_column">
@@ -355,16 +468,14 @@
                             <a href="">Jolly Mäh</a>
                             <div class="price-product">
                                 <p class="initial-price-product">
-                                    <span class="initial-price-product-amount">67.08</span>
-                                    <span class="initial-price-product-currency"> р.</span>
+                                    67.08 р.
                                 </p>
                                 <p class="final-price-product">
-                                    <span class="final-price-product-amount">53.12</span>
-                                    <span class="final-price-product-currency"> р.</span>
+                                    53.12 р.
                                 </p>
                             </div>
                             <form name="gallery-form" method="post" action="" class="gallery-form">
-                                <button type="submit" class="img_block__button add-cart" data-id="NICI1111">В корзину</button>
+                            <button type="submit" class="img_block__button add-cart" data-id="NICI1111">В корзину</button>
                             </form>
                             <div class="promotion">
                                 <div class="svg-promotion">
@@ -409,12 +520,10 @@
                             <a href="">Jolly Mäh</a>
                             <div class="price-product">
                                 <p class="initial-price-product">
-                                    <span class="initial-price-product-amount">67.08</span>
-                                    <span class="initial-price-product-currency"> р.</span>
+                                    67.08 р.
                                 </p>
                                 <p class="final-price-product">
-                                    <span class="final-price-product-amount">53.12</span>
-                                    <span class="final-price-product-currency"> р.</span>
+                                    53.12 р.
                                 </p>
                             </div>
                             <form name="gallery-form" method="post" action="" class="gallery-form">
@@ -434,12 +543,10 @@
                             <a href="">Jolly Mäh</a>
                             <div class="price-product">
                                 <p class="initial-price-product">
-                                    <span class="initial-price-product-amount">67.08</span>
-                                    <span class="initial-price-product-currency"> р.</span>
+                                    67.08 р.
                                 </p>
                                 <p class="final-price-product">
-                                    <span class="final-price-product-amount">53.12</span>
-                                    <span class="final-price-product-currency"> р.</span>
+                                    53.12 р.
                                 </p>
                             </div>
                             <form name="gallery-form" method="post" action="" class="gallery-form">
@@ -460,12 +567,10 @@
                             <a href="">Jolly Mäh</a>
                             <div class="price-product">
                                 <p class="initial-price-product">
-                                    <span class="initial-price-product-amount">67.08</span>
-                                    <span class="initial-price-product-currency"> р.</span>
+                                    67.08 р.
                                 </p>
                                 <p class="final-price-product">
-                                    <span class="final-price-product-amount">53.12</span>
-                                    <span class="final-price-product-currency"> р.</span>
+                                    53.12 р.
                                 </p>
                             </div>
                             <form name="gallery-form" method="post" action="" class="gallery-form">
@@ -514,12 +619,10 @@
                             <a href="">Jolly Mäh</a>
                             <div class="price-product">
                                 <p class="initial-price-product">
-                                    <span class="initial-price-product-amount">67.08</span>
-                                    <span class="initial-price-product-currency"> р.</span>
+                                    67.08 р.
                                 </p>
                                 <p class="final-price-product">
-                                    <span class="final-price-product-amount">53.12</span>
-                                    <span class="final-price-product-currency"> р.</span>
+                                    53.12 р.
                                 </p>
                             </div>
                             <form name="gallery-form" method="post" action="" class="gallery-form">
@@ -539,12 +642,10 @@
                             <a href="">Jolly Mäh</a>
                             <div class="price-product">
                                 <p class="initial-price-product">
-                                    <span class="initial-price-product-amount">67.08</span>
-                                    <span class="initial-price-product-currency"> р.</span>
+                                    67.08 р.
                                 </p>
                                 <p class="final-price-product">
-                                    <span class="final-price-product-amount">53.12</span>
-                                    <span class="final-price-product-currency"> р.</span>
+                                    53.12 р.
                                 </p>
                             </div>
                             <form name="gallery-form" method="post" action="" class="gallery-form">
@@ -565,16 +666,14 @@
                             <a href="">Jolly Mäh</a>
                             <div class="price-product">
                                 <p class="initial-price-product">
-                                    <span class="initial-price-product-amount">67.08</span>
-                                    <span class="initial-price-product-currency"> р.</span>
+                                    67.08 р.
                                 </p>
                                 <p class="final-price-product">
-                                    <span class="final-price-product-amount">53.12</span>
-                                    <span class="final-price-product-currency"> р.</span>
+                                    53.12 р.
                                 </p>
                             </div>
                             <form name="gallery-form" method="post" action="" class="gallery-form">
-                                <button type="submit" class="img_block__button add-cart">В корзину</button>
+                            <button type="submit" class="img_block__button add-cart">В корзину</button>
                             </form>
                             <div class="promotion">
                                 <div class="svg-promotion">
@@ -629,6 +728,7 @@
                         <li class="card"></li>
                         <li class="card"></li> -->
                     </ul>
+                    </div>
                 </section> 
             </div> 
         </div>
@@ -760,6 +860,6 @@
 <script src="js/control.js" type="text/javascript"></script>   
 <script src="js/price-control.js" type='text/javascript'></script> 
 <script src="js/slick.min.js" type="text/javascript"></script> 
-<script src="js/cart-right.js" type="text/javascript"></script>
+<script src="js/cart-right.js" type="text/javascript"></script> 
 </body>
 </html>

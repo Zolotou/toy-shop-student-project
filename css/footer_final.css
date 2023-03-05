@@ -68,7 +68,7 @@
     justify-content: center;
     /* height: 52px; */
     /* РОМАН: для адаптива */
-    width: 300px;
+    width: 500px; /* 300px; */
     min-width: 50%;
     position: relative;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
