@@ -21,9 +21,11 @@ closeCart.onclick = () =>{
     cartOverlay.classList.remove("transparentBcg");
     cart.classList.remove("active");
 };
-cartOverlay.onclick = () =>{
-    cartOverlay.classList.remove("transparentBcg");
-    cart.classList.remove("active");
+cartOverlay.onclick = (e) =>{
+    if(e.target.className !== 'cart-right active') {
+        cartOverlay.classList.remove("transparentBcg");
+        cart.classList.remove("active");
+    };
 };
 
 //Cart Working JS

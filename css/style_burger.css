@@ -38,12 +38,13 @@ body._lock{
 .menu__wrapper {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 /*li первого уровня меню*/
 .menu__list > li{
     position: relative;
-    margin: 0px 0px 0px 20px;
 }
 
 /* a href первого уровня меню */
@@ -99,6 +100,7 @@ body._lock{
 }
 
 .menu__sublink{
+    padding: 10px 0;
     color: #484848;
 }
 
@@ -113,6 +115,7 @@ p.menu__sublink {
 
 .menu__arrow {
     /* display: none; */
+    transition: all 0.2s ease-in-out;
 }
 
 /*----------------------*/
@@ -266,6 +269,7 @@ li.profile-hidden {
 }
 
 .menu__sublist li._active .menu__wrapper > .menu__arrow, .menu__sublist li:hover .menu__wrapper > .menu__arrow {
+    transition: all 0.2s ease-out;
     transform: rotate(-90deg);
 }
 
@@ -273,6 +277,7 @@ li.profile-hidden {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
 }
 
 }
@@ -402,11 +407,11 @@ li.profile-hidden {
     /*Я добавила чтобы убрать отступ слева у ul*/
     .menu__list {
     padding-inline-start: 0px;
+    margin-top: 0;
     }
 
     .menu__list > li {
         flex-wrap: wrap;
-        margin: 20px 0px 20px 0px;
         border-bottom: 1px solid #e1e2e1;
         /* display: flex;
         flex-direction: row;
@@ -438,14 +443,16 @@ li.profile-hidden {
     .menu__link {
         font-size: 18px;
         color: #484848;
+        margin: 0;
         margin-left: 25px;
+        padding: 10px 0;
+    
     }
 
     .menu__sublist {
         position: relative;
         background-color: rgba(248, 244, 238, 1); /* #c3c3c3; */
         flex: 1 1 100%;
-        margin: 20px 0px 0px 0px;
         display: none;
         border-top: 1px solid #e1e2e1;
     }
@@ -464,18 +471,12 @@ li.profile-hidden {
     } */
 
     .menu__sublist  li {
-        padding: 10px 0px; /* 20px; */
         /* margin-left: 5px; */
     }
 
     /*я добавила*/
     .menu__sublist  li._active /* > .menu__sublist */ {
         display: block;
-    }
-
-    /*я добавила*/
-    .menu__sublist  li._active:first-child /* > .menu__sublist */ {
-        border-top: 1px solid #e1e2e1;
     }
 
     .menu__sublist  .menu__sublist {
@@ -506,7 +507,7 @@ li.profile-hidden {
         background-image: url(../images/arrow-down-grey.svg); /*button-minus.svg*/
         background-size: cover;  
         background-repeat: no-repeat;
-        margin-left: 10px;
+        margin-right: 10px;
     }
 
    
