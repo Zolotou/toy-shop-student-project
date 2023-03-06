@@ -7,14 +7,25 @@ $(function(){
     })
 
     //Footer
-    // $('.f-title-box').click(function(){
+    let screenChange = $(window).width() > 768 ? 'desktop' : 'mobile' ;
+    $(window).on('resize', function(){
+      const screenWidth = $(window).width();
+      if(screenWidth > 768 && screenChange !== 'desktop'){
+        screenChange = 'desktop'
+        $('.f-title-box').addClass('open')
+        $('.f-title-box').next('.f-list-link').addClass('open')
+        console.log('desktop')
+      } 
+      if(screenWidth < 768 && screenChange !== 'mobile') {
+        screenChange = 'mobile'
+        $('.f-title-box').removeClass('open')
+        $('.f-title-box').next('.f-list-link').removeClass('open')
+        $('.f-title-box').last().addClass('open')
+        $('.f-title-box').last().next('.f-list-link').addClass('open')
+        console.log('mobile')
+      }
+    });
     $('.f-title-box').click(function(event){
-        var target = $(event.target);
-        var screenWidth = $(window).width();
-        if(!target.is(".button-plus-minus") &&  screenWidth > 768) {
-            return null;
-        }
-    // $('.f-title-box').click(function(){
         $(this).toggleClass('open');
         $(this).next('.f-list-link').toggleClass('open');
     })   
