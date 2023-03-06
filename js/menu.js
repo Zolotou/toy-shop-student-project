@@ -30,32 +30,24 @@ if(menuArrows.length > 0){
                                 }
                         }     
                         parentElem.classList.toggle('_active');
-                        console.log(parentElem.classList);
                         // убрать класс _active детям закрытого li
-                        if (!(parentElem.classList.contains('_active'))) {
-                                var children_li = getChildren(parentElem);
-                                // console.log(children_li);
+                        if (true) {
+                                childs = [];
+                                const children_li = getChildren(parentElem);
                                 if(children_li.length > 0){
                                         for(let index = 0; index < children_li.length; index++){
                                                 const child_li = children_li[index];
-                                                child_li.classList.remove('_active');
+                                                child_li.className = "";
                                         }
                                 } 
                         }
-
-                       /*  menuArrow.parentElement.classList.toggle('_active');
-                        if(menuArrow.parentElement.parentElement.tagName === 'LI'){
-                                menuArrow.parentElement.parentElement.classList.toggle('_active');     
-                        } */
                 });
         }
 }
 //Children li текущего li элемента
 var childs = [];
 var getChildren = function (elem) {
-        // var childs = [];
         for (const child of elem.children) {
-                // console.log(child);
                 if (child.tagName === 'UL') {
                         getChildren(child);
                 }
@@ -64,7 +56,6 @@ var getChildren = function (elem) {
                         getChildren(child);
                 }
         }
-        // console.log(childs);
         return childs;        
 }
 
